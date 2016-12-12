@@ -1,0 +1,92 @@
+// "wrap"
+ASQ.wrap = function $$wrap(fn,opts) {
+	function checkThis(t,o) {
+		return (!t ||
+			(typeof window != "undefined" && t === window) ||
+			(typeof global != "undefined" && t === global)
+		) ? o : t;
+	}
+
+	function paramSpread(gen) {
+		return function *paramSpread(token) {
+			yield *gen.apply(this,token.messages);
+		};
+	}
+
+	var errfcb, params_first, act, this_obj, spread_gen_params;
+
+	opts = (opts && typeof opts == "object") ? opts : {};
+
+	if (
+		(opts.errfcb && opts.splitcb) ||
+		(opts.errfcb && opts.simplecb) ||
+		(opts.splitcb && opts.simplecb) ||
+		("errfcb" in opts && !opts.errfcb && !opts.splitcb && !opts.simplecb) ||
+		(opts.params_first && opts.params_last) ||
+		(opts.spread && !opts.gen)
+	) {
+		throw Error("Invalid options");
+	}
+
+	// initialize default flags
+	this_obj = (opts["this"] && typeof opts["this"] == "object") ? opts["this"] : ø;
+	errfcb = opts.errfcb || !(opts.splitcb || opts.simplecb);
+	params_first = !!opts.params_first ||
+		(!opts.params_last && !("params_first" in opts || opts.params_first)) ||
+		("params_last" in opts && !opts.params_first && !opts.params_last)
+	;
+	// spread (default: true)
+	spread_gen_params = !!opts.spread || !("spread" in opts);
+
+	if (params_first) {
+		act = "push";
+	}
+	else {
+		act = "unshift";
+	}
+
+	if (opts.gen) {
+		if (spread_gen_params) {
+			fn = paramSpread(fn);
+		}
+		return function $$wrapped$gen() {
+			return ASQ(ASQ.messages.apply(ø,arguments)).runner(fn);
+		};
+	}
+	if (errfcb) {
+		return function $$wrapped$errfcb() {
+			var args = ARRAY_SLICE.call(arguments),
+				_this = checkThis(this,this_obj)
+			;
+
+			return ASQ(function $$asq(done){
+				args[act](done.errfcb);
+				fn.apply(_this,args);
+			});
+		};
+	}
+	if (opts.splitcb) {
+		return function $$wrapped$splitcb() {
+			var args = ARRAY_SLICE.call(arguments),
+				_this = checkThis(this,this_obj)
+			;
+
+			return ASQ(function $$asq(done){
+				args[act](done,done.fail);
+				fn.apply(_this,args);
+			});
+		};
+	}
+	if (opts.simplecb) {
+		return function $$wrapped$simplecb() {
+			var args = ARRAY_SLICE.call(arguments),
+				_this = checkThis(this,this_obj)
+			;
+
+			return ASQ(function $$asq(done){
+				args[act](done);
+				fn.apply(_this,args);
+			});
+		};
+	}
+};

@@ -1,0 +1,50 @@
+{
+  "name": "content-mgr",
+  "version": "0.0.11",
+  "description": "Azure storage based image/file service server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "register-vars": "source env.sh",
+    "clean": "rm -rf node_modules",
+    "clean:install": "npm run clean && npm run install",
+    "version:patch": "npm version patch",
+    "azure:push:dev": "git push azure-dev master",
+    "azure:register:dev": "git remote add azure-dev https://digitalx-deploy@lcm-content-temp.scm.azurewebsites.net:443/lcm-content-temp.git",
+    "azure:push:test": "git push azure-test master",
+    "azure:register:test": "git remote add azure-test tbv",
+    "azure:push:prod": "git push azure-dev master",
+    "azure:register:prod": "git remote add azure-dev tbv",
+    "deploy:dev": "npm run version:patch && npm run azure:push:dev",
+    "deploy:test": "npm run version:patch && npm run azure:push:test",
+    "deploy:prod": "npm run version:patch && npm run azure:push:prod",
+    "generate:key": "source env.sh && node lib/keyutil.js"
+  },
+  "keywords": [
+    "content",
+    "azure",
+    "server",
+    "hapi"
+  ],
+  "author": "Aureliano",
+  "license": "MIT",
+  "dependencies": {
+    "asynquence": "^0.9.0",
+    "asynquence-contrib": "^0.27.0",
+    "azure-storage": "^1.3.2",
+    "boom": "^4.2.0",
+    "fs-extra": "^1.0.0",
+    "hapi": "^15.2.0",
+    "hapi-auth-jwt": "^4.0.0",
+    "inert": "^4.0.3",
+    "promise": "^7.1.1",
+    "shortid": "^2.2.6",
+    "sharp":"^0.16.2"
+  },
+  "devDependencies": {
+    "jsonwebtoken": "^7.1.9"
+  },
+  "engines": {
+    "node": "6.6"
+  }
+}

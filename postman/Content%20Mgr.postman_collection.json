@@ -1,0 +1,158 @@
+{
+	"id": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
+	"name": "Content Mgr",
+	"description": "",
+	"order": [
+		"179be6d9-bd1a-a592-3236-5135b14325ce",
+		"29866df0-89f9-1ddb-f422-db6251dc7543",
+		"5bb16fb6-7613-15e7-75b0-ae409f595438",
+		"31c6d450-e199-182c-26c2-4c70e1946667",
+		"270130c1-2bca-d0bb-dcbe-0c540e5ed96f",
+		"1e0895dd-359a-118e-ffb6-98a513884640"
+	],
+	"folders": [],
+	"timestamp": 1480693753249,
+	"owner": "252991",
+	"public": false,
+	"requests": [
+		{
+			"id": "179be6d9-bd1a-a592-3236-5135b14325ce",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
+			"url": "https://lcm-content-temp.azurewebsites.net/file",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "file",
+					"value": "dockeradvanced.pdf",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "filename",
+					"value": "alt-filename.pdf",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480693769178,
+			"name": "Post file",
+			"description": "",
+			"collectionId": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
+			"responses": []
+		},
+		{
+			"id": "1e0895dd-359a-118e-ffb6-98a513884640",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
+			"url": "https://lcm-content-temp.azurewebsites.net/image/test.jpg",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480694760456,
+			"name": "Delete image",
+			"description": "",
+			"collectionId": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
+			"responses": []
+		},
+		{
+			"id": "270130c1-2bca-d0bb-dcbe-0c540e5ed96f",
+			"headers": "",
+			"url": "https://lcm-content-temp.azurewebsites.net/image/doom.jpg?w=200",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480694734890,
+			"name": "Get image",
+			"description": "",
+			"collectionId": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
+			"responses": []
+		},
+		{
+			"id": "29866df0-89f9-1ddb-f422-db6251dc7543",
+			"headers": "",
+			"url": "https://lcm-content-temp.azurewebsites.net/file/alt-filename.pdf",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get file",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1480693782994,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "31c6d450-e199-182c-26c2-4c70e1946667",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
+			"url": "https://lcm-content-temp.azurewebsites.net/image",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "file",
+					"value": "15232287_10154265177788924_4240732833889675784_n.jpg",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "filename",
+					"value": "doom.jpg",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480694682914,
+			"name": "Post image",
+			"description": "",
+			"collectionId": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
+			"responses": []
+		},
+		{
+			"id": "5bb16fb6-7613-15e7-75b0-ae409f595438",
+			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
+			"url": "https://lcm-content-temp.azurewebsites.net/file/alt-filename.pdf",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1480693821425,
+			"name": "Delete file",
+			"description": "",
+			"collectionId": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
+			"responses": []
+		}
+	]
+}
