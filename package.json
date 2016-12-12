@@ -1,6 +1,6 @@
 {
-  "name": "content-mgr",
-  "version": "0.0.11",
+  "name": "azure-image-server",
+  "version": "0.1.11",
   "description": "Azure storage based image/file service server",
   "main": "server.js",
   "scripts": {
@@ -10,11 +10,11 @@
     "clean:install": "npm run clean && npm run install",
     "version:patch": "npm version patch",
     "azure:push:dev": "git push azure-dev master",
-    "azure:register:dev": "git remote add azure-dev https://digitalx-deploy@lcm-content-temp.scm.azurewebsites.net:443/lcm-content-temp.git",
+    "azure:register:dev": "git remote add azure-dev tbi",
     "azure:push:test": "git push azure-test master",
-    "azure:register:test": "git remote add azure-test tbv",
+    "azure:register:test": "git remote add azure-test tbi",
     "azure:push:prod": "git push azure-dev master",
-    "azure:register:prod": "git remote add azure-dev tbv",
+    "azure:register:prod": "git remote add azure-dev tbi",
     "deploy:dev": "npm run version:patch && npm run azure:push:dev",
     "deploy:test": "npm run version:patch && npm run azure:push:test",
     "deploy:prod": "npm run version:patch && npm run azure:push:prod",
@@ -26,7 +26,7 @@
     "server",
     "hapi"
   ],
-  "author": "Aureliano",
+  "author": "Aureliano Bergese aureliano.bergese[at]gmail.com",
   "license": "MIT",
   "dependencies": {
     "asynquence": "^0.9.0",
