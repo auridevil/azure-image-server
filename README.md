@@ -5,6 +5,9 @@ azure-image-server
 simple use
 ==========
 
+```
 git clone https://github.com/auridevil/azure-image-server.git
 npm install
 npm start
+```
+
