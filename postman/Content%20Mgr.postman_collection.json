@@ -1,6 +1,6 @@
 {
 	"id": "6c62acf8-19f1-8ade-75f0-71ecb6cb8400",
-	"name": "Content Mgr",
+	"name": "AzureImageServer",
 	"description": "",
 	"order": [
 		"179be6d9-bd1a-a592-3236-5135b14325ce",
@@ -17,8 +17,8 @@
 	"requests": [
 		{
 			"id": "179be6d9-bd1a-a592-3236-5135b14325ce",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
-			"url": "https://lcm-content-temp.azurewebsites.net/file",
+			"headers": "Authorization: Bearer xxxxxxxxxx\n",
+			"url": "https://xxxxxx.azurewebsites.net/file",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "POST",
@@ -48,8 +48,8 @@
 		},
 		{
 			"id": "1e0895dd-359a-118e-ffb6-98a513884640",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
-			"url": "https://lcm-content-temp.azurewebsites.net/image/test.jpg",
+			"headers": "Authorization: Bearer xxxxxxxxx\n",
+			"url": "https://xxxxxxx.azurewebsites.net/image/test.jpg",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "DELETE",
@@ -68,7 +68,7 @@
 		{
 			"id": "270130c1-2bca-d0bb-dcbe-0c540e5ed96f",
 			"headers": "",
-			"url": "https://lcm-content-temp.azurewebsites.net/image/doom.jpg?w=200",
+			"url": "https://xxxxxx.azurewebsites.net/image/doom.jpg?w=200",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "GET",
@@ -87,7 +87,7 @@
 		{
 			"id": "29866df0-89f9-1ddb-f422-db6251dc7543",
 			"headers": "",
-			"url": "https://lcm-content-temp.azurewebsites.net/file/alt-filename.pdf",
+			"url": "https://xxxxxxx.azurewebsites.net/file/alt-filename.pdf",
 			"pathVariables": {},
 			"preRequestScript": null,
 			"method": "GET",
@@ -106,8 +106,8 @@
 		},
 		{
 			"id": "31c6d450-e199-182c-26c2-4c70e1946667",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
-			"url": "https://lcm-content-temp.azurewebsites.net/image",
+			"headers": "Authorization: Bearer xxxxx\n",
+			"url": "https://xxxx.azurewebsites.net/image",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "POST",
@@ -137,8 +137,8 @@
 		},
 		{
 			"id": "5bb16fb6-7613-15e7-75b0-ae409f595438",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE0ODA2ODQyNjR9.fHqnrs6DZGQSzcS72uzyW8k4YnFbIff8GkF_DYmUqMI\n",
-			"url": "https://lcm-content-temp.azurewebsites.net/file/alt-filename.pdf",
+			"headers": "Authorization: Bearer xxxxxxxxx\n",
+			"url": "https://xxxxxxxx.azurewebsites.net/file/alt-filename.pdf",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "DELETE",
